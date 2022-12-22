@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/b72ae05b11.js" crossorigin="anonymous"></script>
+    
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap" rel="stylesheet">
+    <script src="main.js" defer></script>
+
+    <!--random font (size, color)-->
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+     
+    /*Colors you need to add for your anchor tags*/
+    var colors = ['red', 'yellowgreen', 'purple', 'orange', 'gray'];
+     
+    /*Minimum & Maximum font Size*/
+    var minFontSize = 10;
+    var maxFontSize = 40;
+     
+    /*Finding all the links inside a Div*/
+    $('#hashtags').find('a').each(function(e) {
+    /*Applying font size*/
+    $(this).css("fontSize", randomNumberGenerator(minFontSize, maxFontSize));
+    /*Applying font color*/
+    $(this).css("color", colors[Math.floor(Math.random() * colors.length)]);
+    });
+     
+    /*Random Number Generator function*/
+    function randomNumberGenerator(min,max)
+    {
+    return Math.floor(Math.random()*(max-min+1)+min);
+    }
+    });
+    </script>
+
+<title>Main</title>
+</head>
+
+<body>
+    
+    <!-- logo  -->
+    <nav class="navbar">
+
+        <div class="navbar__logo">
+
+            <i class="fa-solid fa-battery-full"></i>
+            <a href="">Taeyeon Portfolio</a>
+
+        </div>
+
+        <!-- menubar -->
+        <ul class="navbar__menu">
+
+            <li><a href="">Main</a></li>
+            <li><a href="">Profile</a></li>
+            <li><a href="">Project</a></li>
+            <li><a href="">Board</a></li>
+            <li><a href="">Contact</a></li>
+            
+        </ul>
+
+        <!--github, linkedin-->
+        <ul class="navbar__icons">
+            
+            <li><a href="https://www.linkedin.com/in/7-taeyeon-kim/"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/Taeyeon-dev"><i class="fa-brands fa-square-github"></i></a></li>
+
+        </ul>
+
+        <!--hambuger menubar-->
+        <a href="#" class="navbar__toggle">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+    
+    </nav>
+
+    <div class = mainPage>
+
+        <img class="mainImg" src='resources/Eating salad _Flatline.svg' alt='sampleImage'>
+        <div id="hashtags">
+            <a href="#" target="_blank">#Developer</a>
+            <a href="#" target="_blank">#New grad</a>
+            <a href="#" target="_blank">#Coding</a>
+            <a href="#" target="_blank">#Java</a>
+            <a href="#" target="_blank">#JavaScript</a>
+            <a href="#" target="_blank">#Pizza</a>
+            <a href="#" target="_blank">#Skating</a>
+            <a href="#" target="_blank">#TaylorSwift</a>
+            <a href="#" target="_blank">#HappyVirus</a>        
+            <a href="#" target="_blank">#Puppy</a>
+        </div>
+
+    </div>
+</body>
+</html>
