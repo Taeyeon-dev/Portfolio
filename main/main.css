@@ -1,0 +1,33 @@
+.mainImg{
+    padding-top: 50px;
+    display: block; 
+    margin: 0px 
+    auto; 
+}
+
+#hashtags{
+    text-align:  center;
+}
+
+.welcomeTxt h1{
+    margin: 0;
+    font-family: 'Source sans pro';
+    text-align:  center;
+    margin-top: 15px;
+    
+}
+
+.welcomeTxt2 p{
+    padding-top: 20px;
+    display: block; 
+    margin: 0px 
+    auto; 
+    height: 300px;
+    width: 550px;
+}
+
+.welcomeTxt2 img{
+    height: 30px;
+    width: 30px;
+
+}

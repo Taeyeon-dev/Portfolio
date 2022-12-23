@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profile.css">
+    <script src="https://kit.fontawesome.com/b72ae05b11.js" crossorigin="anonymous"></script>
+    <script src="main/header.js" defer></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Profile</title>
+
+</head>
+<body>
+
+
+    <div id="header">
+       
+    </div>
+
+    <script>
+         async function fetchHtmlAsText(url) {
+            return await (await fetch(url)).text();
+        }
+        
+        async function importPage(target) {
+            document.querySelector('#' + target).innerHTML = await fetchHtmlAsText( target + '.html');
+        }
+
+        importPage("header");
+
+    </script>
+  
+
+    <div class="tableDetail">
+
+
+        <h1>Profile</h1>
+        <h5>World > Canada > IT > Developer</h5>
+
+
+            <table>
+
+                <tr> 
+                    <td rowspan="6">
+                        <img src="../resources/bubble-gum-woman-travels-and-takes-a-selfie.png" alt="selfie">
+                    </td>
+                    <td>
+                        <h2>Taeyeon Kim, Computer Programming, Java, JavaScript, CSS, HTML, Python, Zenhub, Adaptability, Fastlearner</h2>
+                    </td>
+                    
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>★★★★★&nbsp;&nbsp;&nbsp;&nbsp; 223 ratings | 12 answered questions</p> 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: red; font-weight: bold;">Top deal</td>                    
+                </tr>
+                <tr>
+                    <td style="color: red; font-size: 30px; font-weight: lighter;">-50%</td>                    
+                </tr>
+                <tr>
+                    <td>available: 1</td>                    
+                </tr>
+
+                <tr>
+                    <td>
+                        <button type="button" class="btn btn-danger" onclick="myFunction()">Hire me</button>
+                    </td>                    
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <h3 style="font-weight: bold;">Details</h3>
+                        <hr>
+                        <p>
+                            Insightful computer programming student who excels at Python and JavaScript and actively seeking a full-time position. 
+                            I'm in the last semester of computer programming, and my graduation is scheduled for December 2022.
+                        </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <hr>
+                        <h4 style="font-weight: bold;">Skills</h4>
+                        <p></p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Language: Java, Python, JavaScript</li>
+                            <li>Framework: Spring, MyBatis, React Native</li>
+                            <li>Other: jQuery, CSS3, HTML</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Software: Eclipse, Oracle, Visual Studio Code, Android Studio, MySQL, VMWare Workstation</li>
+                            <li>Tool: Git, ZenHub, Figma</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <hr>
+                        <h4 style="font-weight: bold;">Education</h4>
+                        <p>Algonquin College (Ottawa, Canada) | Computer Programming (2 years)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2021.9 – 2022.12 </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <hr>
+                        <h4 style="font-weight: bold;">Work</h4>
+                        <p>Barista at WAVES (Calgary, Canada)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2019.10 – 2020.3 </p>
+                        <ul>
+                            <li>Updated job knowledge by reading coffee, retail trade, and maintaining personal networks with customers.</li>
+                            <li>Communicated and coordinated with colleagues as necessary.</li>
+                            <li>Provided feedback on the efficiency of the customer service process.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        
+            
+        </div>
+  
+        <script>
+            function myFunction() {
+              alert("Thank you for giving me a chance! Have a good Day.");
+            }  
+
+        </script>
+  
+    
+    
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/b72ae05b11.js" crossorigin="anonymous"></script>
+    
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Source+Sans+Pro:wght@200;400&display=swap" rel="stylesheet">
+    
+    <script src="header.js" defer></script>
+
+    <!--random font (size, color)-->
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+     
+    /*Colors you need to add for your anchor tags*/
+    var colors = ['red', 'yellowgreen', 'purple', 'orange', 'gray'];
+     
+    /*Minimum & Maximum font Size*/
+    var minFontSize = 10;
+    var maxFontSize = 40;
+     
+    /*Finding all the links inside a Div*/
+    $('#hashtags').find('a').each(function(e) {
+    /*Applying font size*/
+    $(this).css("fontSize", randomNumberGenerator(minFontSize, maxFontSize));
+    /*Applying font color*/
+    $(this).css("color", colors[Math.floor(Math.random() * colors.length)]);
+    });
+     
+    /*Random Number Generator function*/
+    function randomNumberGenerator(min,max)
+    {
+    return Math.floor(Math.random()*(max-min+1)+min);
+    }
+    });
+    </script>
+
+<title>Main</title>
+</head>
+
+<body>
+
+    <div id="header">
+       
+    </div>
+
+    <script>
+         async function fetchHtmlAsText(url) {
+            return await (await fetch(url)).text();
+        }
+        
+        async function importPage(target) {
+            document.querySelector('#' + target).innerHTML = await fetchHtmlAsText(target + '.html');
+        }
+
+        importPage("header");
+    </script>
+  
+
+    </div>
+    <div class = mainPage>
+
+        <img class="mainImg" src='../resources/bubble-gum-workflow.gif' alt='sampleImage'>
+        <div id="hashtags">
+            <a href="" target="_blank">#Developer</a>
+            <a href="" target="_blank">#New grad</a>
+            <a href="#" target="_blank">#Coding</a>
+            <a href="#" target="_blank">#Java</a>
+            <a href="#" target="_blank">#JavaScript</a>
+            <a href="#" target="_blank">#Pizza</a>
+            <a href="#" target="_blank">#Skating</a>
+            <a href="#" target="_blank">#TaylorSwift</a>
+            <a href="#" target="_blank">#HappyVirus</a>        
+            <a href="#" target="_blank">#Puppy</a>
+        </div>
+
+    </div>
+
+
+        <div class="welcomeTxt">
+
+            <h1>&lt;Hello, Welcome to my website&gt;</Hello></h1>
+
+        </div>
+
+        <div class="welcomeTxt2">
+
+            <p>Hello, I am Taeyeon Kim who made this website. I studied computer programming at Algonquin College (2years). My favorite food is Pizza
+                <img src="../resources/pizza.png" alt="pizza">. I usually go to Banff to ride skating. Recently I am enjoy to listen the Taylor Swift music.
+                Her new album is so nice. I think the best song of her late album is "Antihero". <img src="../resources/cd-player.png" alt="cdplayer">
+            </p>
+            
+            
+        </div>
+
+      
+  
+</body>
+</html>
