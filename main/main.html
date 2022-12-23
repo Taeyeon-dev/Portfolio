@@ -11,7 +11,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap" rel="stylesheet">
-    <script src="main.js" defer></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Source+Sans+Pro:wght@200;400&display=swap" rel="stylesheet">
+    
+    <script src="header.js" defer></script>
 
     <!--random font (size, color)-->
     <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
@@ -45,49 +50,31 @@
 </head>
 
 <body>
-    
-    <!-- logo  -->
-    <nav class="navbar">
 
-        <div class="navbar__logo">
+    <div id="header">
+       
+    </div>
 
-            <i class="fa-solid fa-battery-full"></i>
-            <a href="">Taeyeon Portfolio</a>
+    <script>
+         async function fetchHtmlAsText(url) {
+            return await (await fetch(url)).text();
+        }
+        
+        async function importPage(target) {
+            document.querySelector('#' + target).innerHTML = await fetchHtmlAsText(target + '.html');
+        }
 
-        </div>
+        importPage("header");
+    </script>
+  
 
-        <!-- menubar -->
-        <ul class="navbar__menu">
-
-            <li><a href="">Main</a></li>
-            <li><a href="">Profile</a></li>
-            <li><a href="">Project</a></li>
-            <li><a href="">Board</a></li>
-            <li><a href="">Contact</a></li>
-            
-        </ul>
-
-        <!--github, linkedin-->
-        <ul class="navbar__icons">
-            
-            <li><a href="https://www.linkedin.com/in/7-taeyeon-kim/"><i class="fa-brands fa-linkedin"></i></a></li>
-            <li><a href="https://github.com/Taeyeon-dev"><i class="fa-brands fa-square-github"></i></a></li>
-
-        </ul>
-
-        <!--hambuger menubar-->
-        <a href="#" class="navbar__toggle">
-            <i class="fa-solid fa-bars"></i>
-        </a>
-    
-    </nav>
-
+    </div>
     <div class = mainPage>
 
-        <img class="mainImg" src='resources/Eating salad _Flatline.svg' alt='sampleImage'>
+        <img class="mainImg" src='../resources/bubble-gum-workflow.gif' alt='sampleImage'>
         <div id="hashtags">
-            <a href="#" target="_blank">#Developer</a>
-            <a href="#" target="_blank">#New grad</a>
+            <a href="" target="_blank">#Developer</a>
+            <a href="" target="_blank">#New grad</a>
             <a href="#" target="_blank">#Coding</a>
             <a href="#" target="_blank">#Java</a>
             <a href="#" target="_blank">#JavaScript</a>
@@ -99,5 +86,24 @@
         </div>
 
     </div>
+
+
+        <div class="welcomeTxt">
+
+            <h1>&lt;Hello, Welcome to my website&gt;</Hello></h1>
+
+        </div>
+
+        <div class="welcomeTxt2">
+
+            <p>Hello, I am Taeyeon Kim who made this website. I studied computer programming at Algonquin College (2years). My favorite food is Pizza
+                <img src="../resources/pizza.png" alt="pizza">.
+            </p>
+            
+            
+        </div>
+
+      
+  
 </body>
 </html>
