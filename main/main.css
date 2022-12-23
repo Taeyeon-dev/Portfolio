@@ -6,7 +6,12 @@
 }
 
 #hashtags{
+    padding-top: 50px;
+    display: block; 
+    margin: 0px 
+    auto; 
     text-align:  center;
+    width: 800px;
 }
 
 .welcomeTxt h1{
@@ -20,8 +25,7 @@
 .welcomeTxt2 p{
     padding-top: 20px;
     display: block; 
-    margin: 0px 
-    auto; 
+    margin: 0px auto; 
     height: 300px;
     width: 550px;
 }
@@ -29,5 +33,4 @@
 .welcomeTxt2 img{
     height: 30px;
     width: 30px;
-
 }

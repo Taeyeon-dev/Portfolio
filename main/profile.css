@@ -1,7 +1,6 @@
 .tableDetail{
     display: block; 
-    margin: 0px 
-    auto; 
+    margin: 0px auto; 
     width: 600px;
     margin-top: 30px;
     margin-bottom: 40px;
@@ -11,5 +10,29 @@
     font-weight: bold;
     margin-top: 10px;
 }
+
+.tableDetail h3{
+    font-weight: bold;
+}
+
+.tableDetail h4{
+    font-weight: bold;
+
+}
+
+.tableDetail p{
+    font-size: 15.5px;
+}
+
+.tableDetail button{
+    background-color:crimson;
+    color: white;
+    width: 75px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+}
+
+
 
 
