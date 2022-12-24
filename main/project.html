@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="project.css">
+    <script src="https://kit.fontawesome.com/b72ae05b11.js" crossorigin="anonymous"></script>
+    
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Source+Sans+Pro:wght@200;400&display=swap" rel="stylesheet">
+    
+   
+    <title>Project</title>
+</head>
+<body>
+
+
+    <div id="header">
+       
+    </div>
+
+    <script>
+         async function fetchHtmlAsText(url) {
+            return await (await fetch(url)).text();
+        }
+        
+        async function importPage(target) {
+            document.querySelector('#' + target).innerHTML = await fetchHtmlAsText(target + '.html');
+        }
+
+        importPage("header");
+    </script>
+
+    <h1>My Project</h1>
+
+
+    <table class="projectTb">
+        <tr>
+            <td>
+                <hr>
+                <h3>PickEco | Mobile application &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2022.9 – 2022.12</h3>
+                <h4>Test Developer and Frontend </h4>
+                <p>Collaborating with Company PickEco, Creating a Mobile Application as per the client’s requirements</p>
+                <ul>
+                    <li>Created test cases, and perform testing on a prototype to find bugs and inconsistencies across OS</li>
+                    <li>Completed unit testing in React</li>
+                    <li>Developed an app using React Native, and simulated using Expo Go</li>
+                    <li>Designed a clean and user-friendly GUI and created a prototype of an app using Figma</li>
+                    <li>Managed the project using ZenHub in an Agile environment</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <hr>
+                <h3>Calculate the average reaction time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2022.7 – 2022.7</h3>
+                <p>Application to calculate the average reaction speed of the user after clicking the button three times.</p>
+                <ul>
+                    <li>Used JavaScript, CSS3, HTML5</li>
+                    <li style="font-style: italic;">Git: <a href="Git: https://github.com/Taeyeon-dev/ReactSpeed.git" style="color: black;">https://github.com/Taeyeon-dev/ReactSpeed.git</a></li>      
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <hr>
+                <h3>Square | Website &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2022.5 – 2022.6 </h3>
+                <p>Square is a forum website to discuss various opinions, share information, and reply. It allows users to write, read, edit, delete posts, and upload files. The app implements a Like button for posts.</p>
+                <ul>
+                    <li>Developed a Java web application.</li>
+                    <li>Dynamic web pages that ensure the adaptability of updated data by using JavaScript and jQuery.</li>
+                    <li>Used Asynchronous JavaScript and XML(Ajax) to ensure the users have unique emails and ids while checking the existing data. </li>
+                    <li>Used Ajax and jQuery to allow the website to keep the like counts updated without having to refresh the webpage. </li>
+                    <li style="font-style: italic;">Git: <a href="https://github.com/Taeyeon-dev/Square.git" style="color: black;">https://github.com/Taeyeon-dev/Square.git</a></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <hr>
+                <h3>Book for you (BK4U) | Website&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2021.6– 2021.8</h3>
+                <p>BK4U is a book rental service website. Users select book genres of book. The admin checks the user’s interest and then sends several books randomly to the user.</p>
+                <ul>
+                    <li>Developed and designed full stack Spring framework web application.</li>
+                    <li>Initiated a meetup board while enabling users’ various functions, such as setting up the schedule, limited attendance, and location using Kakao Map API.</li>
+                    <li>Developed website using software architectural Spring MVC pattern.</li>
+                    <li>Used MyBatis connected with Oracle to build a search function and request a page list.</li>
+                    <li style="font-style: italic;">Git: <a href="https://github.com/Taeyeon-dev/BookForYou.git" style="color: black;">https://github.com/Taeyeon-dev/BookForYou.git</a></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p></p>
+                <div class="topC"  onclick="window.scrollTo(0,0);">TOP</div>
+            </td>
+        </tr>
+    </table>
+    
+
+
+
+</body>
+</html>

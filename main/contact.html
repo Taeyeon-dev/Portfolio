@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <script src="https://kit.fontawesome.com/b72ae05b11.js" crossorigin="anonymous"></script>
+    
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Source+Sans+Pro:wght@200;400&display=swap" rel="stylesheet">
+    
+    <title>Contact</title>
+
+
+</head>
+<body>
+
+    <div id="header">
+       
+    </div>
+
+    <script>
+         async function fetchHtmlAsText(url) {
+            return await (await fetch(url)).text();
+        }
+        
+        async function importPage(target) {
+            document.querySelector('#' + target).innerHTML = await fetchHtmlAsText(target + '.html');
+        }
+
+        importPage("header");
+    </script>
+
+    <div style="display: grid; text-align: center; padding-top: 10%;">
+
+    <h1 style="align-content: center;">Contact</h1>
+
+    <p><i class="fa-brands fa-linkedin" style="color:navy"></i><a href="" style="color: black;">https://www.linkedin.com/in/7-taeyeon-kim/ </a></p>
+    
+    <p><i class="fa-brands fa-square-github"></i><a href="" style="color: black;">https://github.com/Taeyeon-dev</a></p>
+
+    <p><i class="fa-regular fa-envelope" style="color:navy"></i><a href="" style="color: black;">tykim00451@gmail.com</a></p>
+    </div>
+    
+</body>
+</html>
