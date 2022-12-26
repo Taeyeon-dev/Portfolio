@@ -65,8 +65,105 @@
 
         importPage("header");
     </script>
-  
+    
+    <div class="clickGame">
 
+    <h1>React Speed Test</h1>
+    <p>
+        It is a react test game to clicking the green button.
+        <br>
+        It gives you three chance to click the green button.
+        <br>
+        After 3 times, You can see your 'Average react speed' seconds under the button
+        <br><br><br>
+        1. Click the blue button to start <br>
+        2. Waiting for appearing the green button while Pink button <br>
+        3. When the green button is popped, Click it ASAP <br>
+        4. Repeat this step(1 to 3) for 3 times
+    </p>
+    <div id="screen" class="waiting">Click to start</div>
+    <div id="show"></div>
+
+    <script>
+      const screen = document.querySelector('#screen');
+      let start;
+      let end;
+      let count = 0;
+      let score = [];
+      let sum = 0;
+      let averageScore = 0;
+      let timer;
+
+      screen.addEventListener('click', function() {
+
+        if (screen.classList.contains('waiting')) {
+          screen.classList.remove('waiting');
+          screen.classList.add('ready');
+          screen.textContent = 'Waiting...Waiting...Green...';
+
+          timer = setTimeout(function() {
+            start = new Date();
+            screen.click();
+          }, Math.floor(Math.random() * 1000) + 2000);
+
+        } else if (screen.classList.contains('ready')) {
+
+          if (!start) {
+            clearTimeout(timer);
+            screen.classList.remove('ready');
+            screen.classList.add('waiting');
+            screen.textContent = 'Nope.. Please click the green button. if you want to try again, please click here';
+
+          } else {
+            screen.classList.remove('ready');
+            screen.classList.add('go');
+            screen.textContent = 'Click';
+          }
+
+        } else if (screen.classList.contains('go')) {
+
+          end = new Date();
+          result = (end - start) / 1000
+          console.log(result + 'seconds');
+          count += 1;
+          score.push(result);
+
+          screen.classList.remove('go');
+          screen.classList.add('waiting');
+          screen.textContent = 'Click to start';
+
+          //Reset
+          start = null;
+          end = null;
+
+        }
+
+        if (count >= 3) {
+          for (let i = 0; i < score.length; i++) {
+            sum = sum + score[i]
+          }
+
+          averageScore = sum / score.length;
+          console.log(count, score, sum, averageScore);
+          document.querySelector('#show').textContent = `Your average speed is ${averageScore.toFixed(5)}.`;
+
+          setTimeout(function() {
+            backtoBegin();
+          }, 2000);
+
+        }
+
+        //Reset the game
+        function backtoBegin() {
+          count = 0;
+          document.querySelector('#show').textContent = '';
+        }
+      });
+
+    </script>
+
+</div>
+<!--
     </div>
     <div class = mainPage>
 
@@ -120,7 +217,7 @@
             
         </div>
 
-      
+      -->
   
 </body>
 </html>

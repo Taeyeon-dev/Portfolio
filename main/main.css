@@ -1,4 +1,4 @@
-.mainImg{
+/* .mainImg{
     padding-top: 25px;
     display: block; 
     margin: 0px 
@@ -35,4 +35,38 @@
 .welcomeTxt2 img{
     height: 20px;
     width: 20px;
+} */
+#screen {
+    margin-top: 60px;
+    display: block; 
+    margin: 0px auto; 
+    width: 400px;
+    height: 300px;
+    text-align: center;
+    user-select: none;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+#screen.waiting {
+  background: skyblue;
+}
+
+#screen.ready {
+  background: pink;
+}
+
+#screen.go {
+  background: greenyellow;
+}
+
+.clickGame{
+  padding-top: 5%;
+  text-align: center;
+  padding-bottom: 20%;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  
 }
