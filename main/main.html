@@ -82,6 +82,7 @@
         4. Repeat this step(1 to 3) for 3 times
     </p>
     <div id="screen" class="waiting">Click to start</div>
+    <h3>Your Score : </h3>
     <div id="show"></div>
 
     <script>
@@ -145,7 +146,7 @@
 
           averageScore = sum / score.length;
           console.log(count, score, sum, averageScore);
-          document.querySelector('#show').textContent = `Your average speed is ${averageScore.toFixed(5)}.`;
+          document.querySelector('#show').textContent = `Your average speed is ${averageScore.toFixed(10)}.`;
 
           setTimeout(function() {
             backtoBegin();
@@ -161,6 +162,7 @@
       });
 
     </script>
+
 
 </div>
 <!--
