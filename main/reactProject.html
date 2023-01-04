@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b72ae05b11.js" crossorigin="anonymous"></script>
+    
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Source+Sans+Pro:wght@200;400&display=swap" rel="stylesheet">
+    
+   
+<title>Project</title>
+<style>
+
+    #reactProject{
+        padding-left: 80px;    
+        padding-top: 40px;    
+        padding-bottom: 50px; 
+    }
+
+    h3{
+        text-decoration: underline;
+    }
+
+</style>
+</head>
+<body>
+
+
+    <div id="header">
+       
+    </div>
+
+    <script>
+         async function fetchHtmlAsText(url) {
+            return await (await fetch(url)).text();
+        }
+        
+        async function importPage(target) {
+            document.querySelector('#' + target).innerHTML = await fetchHtmlAsText(target + '.html');
+        }
+
+        importPage("header");
+    </script>
+
+<title>React project</title>
+</head>
+<body>
+
+    <div id="reactProject">
+    
+        <h1>React.js Calendar project</h1>
+
+
+        <img src="../resources/ezgif.com-gif-maker (4).gif" alt="react project">
+        
+    <br><br><br>
+    <h3>What it is</h3>
+
+    <p>Using fullcalendar that is a JavaScript library that seamlessly integrates with such popular JavaScript frameworks </p>
+
+    <p>It is a calendar-schedular. User is possible to update schedule and delete it. When finish the schedule, schedule color is changed green to red. </p>
+
+    <br>
+    <h3>What I did</h3>
+    <p>
+        1. Use functional components only <br>
+        Only functional components were used because the functional type was simpler and there was no need for a class type when using the react hook.
+        <br><br>
+        2. React hook (useState(), useDispatch(), useEffect(), useRef(), useSelect())
+        - When the Add button is pressed, the new schedule is saved in Firestore and redux, 
+        <br>
+           and it goes to the main page and dispatches the middleware function that loads the data using useEffect. 
+        <br>
+           Then use Select to retrieve the values stored in the redox and display them on the calendar page.
+        3. UI used css that can give elements detailed effects and styled-components for overall definition.
+        <br><br>
+        4. Data was given as a child component using State and Props.
+        <br><br>
+        5. Paging function was applied to components using Route.
+        <br><br>
+        (Error occurred when attempting to bind with Routes.)
+        <br><br>
+        6. Information was saved and retrieved using Redux.
+        <br>
+        -In the modal window, there are the delete schedule button and the complete button, and when you press the delete button,
+        <br>
+        the corresponding data in the firebase and readerx are found as id values and deleted. 
+        <br>
+        The complete button finds the data with the id value and updates the data key value completed to true.
+        <br><br>
+        7. Data can be stored using Firebase (serverless).
+        <br><br>
+        8. I used middleware to connect Firebase to Redux.
+    </p>
+
+    <br><br>
+    <h2>Responsive Web</h2>
+    <img src="../resources/ezgif.com-gif-maker (2).gif" alt="react page">
+    <p>Web pages used media queries for use on PCs, tablets, and mobile phones. <br>
+        When the width became smaller at 50vw, the width changed the value from 80vw to 100vw. <br>
+        And when it was too big compared to the text screen, 'display: none' was used when the screen became smaller. <br>
+        When the screen becomes smaller, the modal window button is hidden in the menu icon and set to active only when clicked.</p>
+    
+    <br>
+    <h3>What I am gonna have to do</h3>
+    <p>
+        1. Solve the bugs
+        <br>
+        (When click the add button, there is error that main page is not disappeared on small size screen)
+        <br>
+        2. Solve the git conflict
+        <br>
+        Cannot commit and merge becaues of the conflict
+        <br>
+    </p>
+
+    <br>
+    <h3>What I want to do</h3>
+    <p>
+        1. Distingush with Full schedule and Unfinished schedule.
+        <br>
+        2. Create the calendar without library.
+        <br>
+        3. Drag and move the schedules.
+
+    </p>
+
+</div>
+
+</body>
+</html>
